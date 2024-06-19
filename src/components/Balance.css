@@ -1,0 +1,39 @@
+.balance-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .balance-item {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    height: 130px;
+    width: 355px;
+    margin: 1%;
+  }
+  
+  .add-income-button, .add-expense-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-income-button {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .add-expense-button {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  .expense-summary-container {
+    width: 45%;
+  }
+  

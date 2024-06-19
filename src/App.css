@@ -2,37 +2,154 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background: #333;
+  color: white;
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.balance-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.balance-item {
+  background: #444;
+  padding: 1rem;
+  border-radius: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-income-button, .add-expense-button {
+  margin-top: 10px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-income-button {
+  background: #4CAF50;
+  color: white;
+}
+
+.add-expense-button {
+  background: #f44336;
+  color: white;
+}
+
+.recent-transactions, .top-expenses {
+  background: #333;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  margin: 1rem;
+}
+
+.transaction-item, .top-expense-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background: #444;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+}
+
+.edit-button, .delete-button {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.expense-summary {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.modal-content {
+  background: #FFFFFFC4;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: left;
+  z-index: 1010; /* Ensure it's on top of the overlay */
+}
+
+.modal-content input {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cancel-button {
+  background: #ccc;
+  color: #333;
+}
+
+.expense-bar {
+  height: 10px;
+  background-color: #7C4DFF;
+  border-radius: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #f1c40f; /* primary button color */
+  color: white;
+}
+
+.pagination button:disabled {
+  background-color: #95a5a6; /* secondary button color */
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background-color: #e74c3c; /* active page button color */
 }
